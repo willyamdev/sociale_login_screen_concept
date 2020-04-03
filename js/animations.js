@@ -11,38 +11,39 @@ let formForgitPass = document.querySelector(".forgot");
 let formTitle = document.querySelector("#form-title");
 let formButton = document.querySelector("#form-button");
 
-gettingsButton.addEventListener("click", (e)=>{
-    if(gettingsContainer.style.webkitAnimationPlayState == "running") return;
-    
-    if(register){
+gettingsButton.addEventListener("click", (e) => {
+    if (gettingsContainer.style.webkitAnimationPlayState == "running") return;
+
+    if (register) {
         let newWidthGetting = document.body.offsetWidth - gettingsContainer.offsetWidth;
         gettingsContainer.style.transform = `translateX(-${newWidthGetting}px)`;
-        
+
         let newWidthForm = document.body.offsetWidth - formContainer.offsetWidth;
         formContainer.style.transform = `translateX(${newWidthForm}px)`;
         playHideSignUpAnimation();
-    }else{
+    } else {
         gettingsContainer.style.transform = `translateX(0px)`;
         formContainer.style.transform = `translateX(0px)`;
         playHideSignInAnimation();
     }
     playAnimation();
     register = !register;
+    window.scrollTo(0,0);
 });
 
-function playAnimation(){
+function playAnimation() {
     gettingsContainer.style.webkitAnimationPlayState = "running";
 
-    setTimeout(function() {
+    setTimeout(function () {
         gettingsContainer.style.webkitAnimationPlayState = "paused";
     }, 1000);
 }
 
-function playHideSignUpAnimation(){
+function playHideSignUpAnimation() {
     gettingsSignUp.classList.add("hideSignUp");
     gettingsSignUp.style.webkitAnimationPlayState = "running";
 
-    setTimeout(function() {
+    setTimeout(function () {
         formTitle.innerHTML = "Create Account";
         formInputRegistrationContainer.classList.remove("hide");
         formForgitPass.classList.add("hide");
@@ -55,8 +56,8 @@ function playHideSignUpAnimation(){
         gettingsSignIn.classList.add("showSignIn");
         gettingsSignIn.classList.remove("gettings-desactived");
         gettingsSignIn.style.webkitAnimationPlayState = "running";
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             gettingsSignIn.style.webkitAnimationPlayState = "paused";
             gettingsSignIn.classList.remove("showSignIn");
             gettingsButton.innerHTML = "SIGN IN";
@@ -65,11 +66,11 @@ function playHideSignUpAnimation(){
     }, 500);
 }
 
-function playHideSignInAnimation(){
+function playHideSignInAnimation() {
     gettingsSignIn.classList.add("hideSignIn");
     gettingsSignIn.style.webkitAnimationPlayState = "running";
 
-    setTimeout(function() {
+    setTimeout(function () {
         formTitle.innerHTML = "Sign in to Sociale";
         formInputRegistrationContainer.classList.add("hide");
         formForgitPass.classList.remove("hide");
@@ -82,12 +83,25 @@ function playHideSignInAnimation(){
         gettingsSignUp.classList.add("showSignUp");
         gettingsSignUp.classList.remove("gettings-desactived");
         gettingsSignUp.style.webkitAnimationPlayState = "running";
-        
-        setTimeout(function() {
+
+        setTimeout(function () {
             gettingsSignUp.style.webkitAnimationPlayState = "paused";
             gettingsSignUp.classList.remove("showSignUp");
             gettingsButton.innerHTML = "SIGN UP";
         }, 500);
 
     }, 500);
+}
+
+window.onresize = function (e) {
+    gettingsContainer.style.transform = `translateX(0px)`;
+    formContainer.style.transform = `translateX(0px)`;
+    playHideSignInAnimation();
+    register = true;
+
+    if(window.matchMedia("(min-width: 992px)").matches){
+        // console.log("true "+document.body.offsetWidth)
+    }else{
+        // console.log("false " + document.body.offsetWidth)
+    }
 }

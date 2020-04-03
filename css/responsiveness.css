@@ -1,0 +1,90 @@
+@media (min-width: 200px) and (max-width: 575px) {
+  #content {
+    margin-top: 70px;
+    flex-direction: column;
+  }
+
+  .form form {
+    width: 90%;
+  }
+
+  .form button {
+    width: 50%;
+  }
+
+  .gettings, .gettings h1 {
+    margin-top: 20px;
+  }
+
+  .gettings {
+    padding-bottom: 30px;
+  }
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #content {
+    margin-top: 70px;
+    flex-direction: column;
+  }
+
+  .form form {
+    width: 80%;
+  }
+
+  .form button {
+    width: 50%;
+  }
+
+  .gettings, .gettings h1 {
+    margin-top: 20px;
+  }
+
+  .gettings {
+    padding-bottom: 30px;
+  }
+}
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #content {
+    margin-top: 70px;
+    flex-direction: column;
+  }
+
+  .form form {
+    width: 60%;
+  }
+
+  .form button {
+    width: 25%;
+  }
+
+  .gettings, .gettings h1 {
+    margin-top: 20px;
+  }
+
+  .gettings {
+    padding-bottom: 30px;
+  }
+}
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .form form {
+    width: 60%;
+  }
+
+  .form button {
+    width: 25%;
+  }
+}
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+  .form form {
+    width: 60%;
+  }
+
+  .form button {
+    width: 25%;
+  }
+}
+
+/*# sourceMappingURL=responsiveness.css.map */

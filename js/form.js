@@ -33,6 +33,12 @@ nameInput.addEventListener("input", (e)=>{
         inputsInfo[0].className = correct;
         inputPanelInfo[0].innerHTML = "Great name!";
     }else{
+
+        if(name.length == 0){
+            inputsInfo[0].classList.add("hide");
+            return;
+        }
+
         inputsInfo[0].className = error;
         inputPanelInfo[0].innerHTML = "This name is very short, please try to write more!";
     }
@@ -52,6 +58,12 @@ emailInput.addEventListener("input", (e)=>{
         }
 
     }else{
+        
+        if(email.length == 0){
+            inputsInfo[1].classList.add("hide");
+            return;
+        }
+
         inputsInfo[1].className = error;
         inputPanelInfo[1].innerHTML = "This email is very short, please check if this email is valid!";
     }
@@ -64,6 +76,12 @@ passwordInput.addEventListener("input", (e)=>{
         inputsInfo[2].className = correct;
         inputPanelInfo[2].innerHTML = "Strong password!";
     }else{
+
+        if(password.length == 0){
+            inputsInfo[2].classList.add("hide");
+            return;
+        }
+
         inputsInfo[2].className = error;
         inputPanelInfo[2].innerHTML = "This password is very short, please try to write more!";
     }

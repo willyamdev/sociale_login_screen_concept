@@ -1,8 +1,13 @@
 @import url("animations.css");
+@import url("responsiveness.css");
 
 $primaryColor:#303841;
 $formCorrectColor: rgb(0, 255, 0);
 $formErrorColor:rgb(255, 0, 0);
+
+html{
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
@@ -148,7 +153,6 @@ $formErrorColor:rgb(255, 0, 0);
 
 .form form {
     margin-top: 20px;
-    width: 60%;
 }
 
 .input-container {
@@ -175,7 +179,6 @@ $formErrorColor:rgb(255, 0, 0);
     margin-left: 25px;
     color: grey;
     font-size: 21px;
-
 }
 
 .input-container i:nth-child(3) {
@@ -205,7 +208,6 @@ $formErrorColor:rgb(255, 0, 0);
 .form button {
     margin-top: 60px;
     cursor: pointer;
-    width: 25%;
     height: 55px;
     background-color: $primaryColor;
     border-radius: 30px;

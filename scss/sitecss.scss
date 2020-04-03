@@ -1,0 +1,246 @@
+@import url("animations.css");
+
+$primaryColor:#303841;
+$formCorrectColor: rgb(0, 255, 0);
+$formErrorColor:rgb(255, 0, 0);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+#content {
+    display: flex;
+    height: 100vh;
+}
+
+.gettings {
+    z-index: 2;
+    flex: 1;
+    background-color: $primaryColor;
+    transition: 1s;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+
+    animation-name: gettingsContainerAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+
+.gettingsAnimationsConfig {
+    animation-duration: 0.5s;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+}
+
+.hideSignIn {
+    animation-name: hideSignInAnim;
+}
+
+.hideSignUp {
+    animation-name: hideSignUpAnim;
+}
+
+.showSignIn {
+    animation-name: showSignInAnim;
+}
+
+.showSignUp {
+    animation-name: showSignUpAnim;
+}
+
+.gettings .gettings-signup,
+.gettings .gettings-signin {
+    text-align: center;
+}
+
+.gettings h1 {
+    color: white;
+    font-size: 40px;
+}
+
+.gettings p {
+    margin: 0 auto;
+    margin-top: 25px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    width: 75%;
+}
+
+.gettings button {
+    margin-top: 40px;
+    background-color: $primaryColor;
+    border-radius: 30px;
+    border: 2px solid white;
+    width: 50%;
+    height: 55px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.gettings button:focus,
+.form button:focus {
+    outline: 0;
+}
+
+.gettings button:hover {
+    background-color: white;
+    color: $primaryColor;
+}
+
+.form {
+    z-index: 1;
+    transition: 1s;
+    display: flex;
+    flex: 2;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form .hide {
+    display: none;
+}
+
+.form h1 {
+    color: $primaryColor;
+    font-size: 45px;
+    margin: 0;
+    padding: 0;
+}
+
+.login-external {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 200px
+}
+
+.login-item {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border: 2px solid gray;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-item i {
+    font-size: 23px;
+}
+
+.form p {
+    margin-top: 50px;
+}
+
+.form form {
+    margin-top: 20px;
+    width: 60%;
+}
+
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(240, 240, 240);
+    margin-top: 10px;
+
+    .correct {
+        cursor: pointer;
+        color: $formCorrectColor;
+    }
+
+    .error {
+        cursor: pointer;
+        color: $formErrorColor;
+    }
+}
+
+.input-container i {
+    margin-left: 25px;
+    color: grey;
+    font-size: 21px;
+
+}
+
+.input-container i:nth-child(3) {
+    margin-right: 25px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.input-container input {
+    font-size: 17px;
+    margin-left: 15px;
+    border: none;
+    flex: 1;
+    height: 100%;
+    background-color: rgb(240, 240, 240);
+}
+
+.input-container input:focus {
+    outline: 0;
+}
+
+.form a {
+    color: rgb(54, 54, 54);
+    margin-top: 20px;
+}
+
+.form button {
+    margin-top: 60px;
+    cursor: pointer;
+    width: 25%;
+    height: 55px;
+    background-color: $primaryColor;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gettings-desactived {
+    display: none;
+}
+
+#formInfoPanel {
+    width: 150px;
+    padding: 10px;
+    background-color: $primaryColor;
+    position: absolute;
+    right: -50px;
+    text-align: center;
+    bottom: 80%;
+}
+
+#formInfoPanel span {
+    font-size: 14px;
+    color: white;
+}
+
+#formInfoPanel span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}

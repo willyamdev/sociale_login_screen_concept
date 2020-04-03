@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/sitecss.css">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/FontsAwesome/css/all.min.css">
+        <title>Sociale</title>
+    </head>
+    <body>
+        <section id="content">
+
+            <div class="form">
+                <h1 id="form-title">Sign in to Sociale</h1>
+                <div class="login-external">
+                    <div class="login-item">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <div class="login-item">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="login-item">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                </div>
+
+                <p>
+                    or use your email account:
+                </p>
+
+                <form>
+                    <div class="input-container hide">
+                        <i class="far fa-user"></i>
+                        <input type="text" placeholder="Name" id="name-input" />
+                        <i class="fas fa-check hide"></i>
+                        <div id="formInfoPanel" class="hide">
+                            <span>Error</span>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <i class="far fa-envelope"></i>
+                        <input type="text" placeholder="Email" id="email-input">
+                        <i class="fas fa-check hide"></i>
+                        <div id="formInfoPanel" class="hide">
+                            <span>Error</span>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <i class="fas fa-lock"></i>
+                        <input type="text" placeholder="Password"
+                            id="password-input">
+                        <i class="fas fa-check hide"></i>
+                        <div id="formInfoPanel" class="hide">
+                            <span>Error</span>
+                        </div>
+                    </div>
+                </form>
+
+
+                <a href="#" class="forgot">Forgot your password?</a>
+
+                <button id="form-button">SIGN IN</button>
+
+            </div>
+
+            <div class="gettings">
+                <div class="gettings-signup gettingsAnimationsConfig">
+                    <h1>Hello, Friend!</h1>
+                    <p>
+                        Enter your personal details and start journay with us
+                    </p>
+                </div>
+
+                <div class="gettings-signin gettingsAnimationsConfig
+                    gettings-desactived">
+                    <h1>Welcome Back!</h1>
+                    <p>
+                        To keep connected with us please login with your
+                        personal info.
+                    </p>
+                </div>
+
+                <button id="gettings-button">SIGN UP</button>
+            </div>
+
+        </section>
+
+        <script src="js/animations.js"> </script>
+        <script src="js/form.js"> </script>
+    </body>
+</html>

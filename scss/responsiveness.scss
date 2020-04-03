@@ -14,6 +14,10 @@ $marginTop: 70px;
         width: 50%;
     }
 
+    .form h1 {
+        font-size: 37px;
+    }
+
     .gettings, .gettings h1{
         margin-top: 20px;
     }
@@ -45,6 +49,10 @@ $marginTop: 70px;
     .gettings{
         padding-bottom: 30px;
     }
+
+    .form h1 {
+        font-size: 45px;
+    }
 }
 
 /* Medium devices (tablets, 768px and up)*/
@@ -70,6 +78,10 @@ $marginTop: 70px;
     .gettings{
         padding-bottom: 30px;
     }
+
+    .form h1 {
+        font-size: 45px;
+    }
 }
 
 /* Large devices (desktops, 992px and up)*/
@@ -81,6 +93,10 @@ $marginTop: 70px;
     .form button {
         width: 25%;
     }
+
+    .form h1 {
+        font-size: 45px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
@@ -91,5 +107,9 @@ $marginTop: 70px;
 
     .form button {
         width: 25%;
+    }
+
+    .form h1 {
+        font-size: 45px;
     }
 }
